@@ -33,19 +33,6 @@ class ViewController: UIViewController {
                     ]
         request.allHTTPHeaderFields = headers
         
-        // Specify the body (Parameters)
-        
-//        let  jsonObject = ["q" : "Hello World!",
-//                           "target" : "jp",
-//                           ] as [String : Any]
-//        do {
-//            let requestBody =  try JSONSerialization.data(withJSONObject: jsonObject, options: .fragmentsAllowed) // change json object to data object
-//            request.httpBody = requestBody
-//        }
-//        catch{
-//            print("Error creating the data object from json")
-//        }
-        
         let postData = NSMutableData(data: "source=en".data(using: String.Encoding.utf8)!)
         postData.append("&q=Hello, world!".data(using: String.Encoding.utf8)!)
         postData.append("&target=es".data(using: String.Encoding.utf8)!)
